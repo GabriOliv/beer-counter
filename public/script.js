@@ -15,8 +15,8 @@ buttons.forEach(b => b.addEventListener('click', () => {
     }
 }))
 doneButton.addEventListener('click', () => {
-    if (totalLitres >= 1) message.textContent = 'A few beers'
     if (totalLitres == 0.25) message.textContent = 'A beer'
+    if (totalLitres >= 1) message.textContent = 'A few beers'
     if (totalLitres >= 2) message.textContent = 'Stop drinking!'
 })
 resetButton.addEventListener('click', () => {
