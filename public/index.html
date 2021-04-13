@@ -5,36 +5,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/beer.png" type="image/x-icon">
     <title>Beer Counter</title>
+
+    <link rel="shortcut icon" href="img/beer.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 </head>
 
-<body>
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Beer Counter</a></li>
-        </ul>
-    </nav>
-    <div class="main">
-        <img src="img/beer.png" alt="beer-logo">
-        <p id="litres">0L</p>
-        <div class="buttons">
-            <button id="250">0.25 L</button>
-            <button id="300">0.30 L</button>
-            <button id="500">0.50 L</button>
-            <button id=750">0.75 L</button>
-            <button id="1000">1.00 L</button>
-            <br>
-            <button id="done">Done</button>
-            <button id="reset">Reset</button>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: #f28e1c">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <h3><b>Beer Counter</b></h3>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top_navbar" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="top_navbar">
+                <a class="text-decoration-none link-light" href="http://github.com/GabrielCrackPro/beer-counter" target="blank"><b><i class="bi bi-github"></i> Project Repository</b></a>
+            </div>
         </div>
-        <p id="message"></p>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom justify-content-center" style="background: #f28e1c">
+        <span class="text-light">App by <a class="text-decoration-none link-light" href="http://github.com/GabrielCrackPro" target="blank"><b>@GabrielCrackPro</b></a></span>
+    </nav>
+
+    <div class="container col-md-6 my-4">
+        <div class="row">
+            <div class="col mb-3">
+                <div class="ms-auto" style="width: 100px;">
+                    <img class="img-fluid" src="img/beer.svg" alt="beer-logo">
+                </div>
+            </div>
+            <div class="col mb-3">
+                <span class="fs-4"><i class="bi bi-bar-chart-line-fill"></i> <span id="litres">0L</span></span>
+                <p class="fs-3" id="message"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3 gap-1 d-flex justify-content-center">
+                <button id="250" type="button" class="btn btn-outline-dark text-center p-1" aria-label="add 0.25 L"><div class="d-sm-none">0.25 <i class="bi bi-plus-circle"></i></div><div class="d-none d-sm-block">0.25 L</div></button>
+                <button id="300" type="button" class="btn btn-outline-dark text-center p-1" aria-label="add 0.30 L"><div class="d-sm-none">0.30 <i class="bi bi-plus-circle"></i></div><div class="d-none d-sm-block">0.30 L</div></button>
+                <button id="500" type="button" class="btn btn-outline-dark text-center p-1" aria-label="add 0.50 L"><div class="d-sm-none">0.50 <i class="bi bi-plus-circle"></i></div><div class="d-none d-sm-block">0.50 L</div></button>
+                <button id="750" type="button" class="btn btn-outline-dark text-center p-1" aria-label="add 0.75 L"><div class="d-sm-none">0.75 <i class="bi bi-plus-circle"></i></div><div class="d-none d-sm-block">0.75 L</div></button>
+                <button id="1000" type="button" class="btn btn-outline-dark text-center p-1" aria-label="add 1.00 L"><div class="d-sm-none">1.00 <i class="bi bi-plus-circle"></i></div><div class="d-none d-sm-block">1.00 L</div></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3 gap-5 d-flex justify-content-center">
+                <button id="done" type="button" class="btn btn-success text-center p-1" aria-label="Done">
+                    <div class="d-none d-sm-block">Done <i class="bi bi-check-circle-fill"></i></div>
+                    <div class="d-sm-none">Done</div>
+                </button>
+                <button id="reset" type="button" class="btn btn-danger text-center p-1" aria-label="Reset">
+                    <div class="d-none d-sm-block">Reset <i class="bi bi-x-circle-fill"></i></div>
+                    <div class="d-sm-none">Reset</div>
+                </button>
+            </div>
+        </div>
     </div>
-    <footer>
-        <p>App by <a href="http://github.com/GabrielCrackPro" target="blank">@GabrielCrackPro</a></p>
-    </footer>
-    <script src="script.js"></script>
+
+    <script src="script.js" type="text/javascript"></script>
+
 </body>
 
 </html>
